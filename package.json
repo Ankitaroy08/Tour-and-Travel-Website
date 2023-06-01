@@ -4,11 +4,14 @@
   "description": "Tour website project",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd Backend && npm run backend",
+    "dev": "concurrently \"nodemon app.js\" \"npm run client\""
   },
   "author": "Shipra Saumya",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^8.0.1",
     "express": "^4.18.2",
     "nodemon": "^2.0.20"
   }
